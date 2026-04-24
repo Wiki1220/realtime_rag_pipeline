@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.python-version
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+.env
+.env.*
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Data and Logs
+logs/
+logs/*.log
+logs/*.db
+*.log
+data/*.db
+data/pending_reviews.db
+data/pipeline_states.db
+data/deferred_uploads/
+data/uploads/
+data/file_cache/
+data/pdf/
+data_process/result/
+.pycache/
+_archive/
+
+# JS / Node
+node_modules/
+
+# Temporary / Local runtime
+*.pid
+*.seed
+*.out
+*.err
+*.tmp
+tmp/
+temp/
+
+# Local platform junk
+._*
+Icon?
+
+# Test scratch files in project root
+test*.py
+!tests/test_*.py
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

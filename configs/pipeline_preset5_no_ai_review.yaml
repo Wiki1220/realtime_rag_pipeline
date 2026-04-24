@@ -1,0 +1,31 @@
+# configs/pipeline_preset5_no_ai_review.yaml
+# 预设5-无AI审核：个人知识入库链路（无 MultiLLMFilterProcessor）
+
+pipeline_steps:
+  - name: "MinerUOCRProcessor"
+    params:
+      base_url: "http://127.0.0.1:8000"
+      parse_method: "auto"
+      request_timeout_seconds: 3600
+      max_retries: 3
+
+  - name: "HybridAdvancedChunkerProcessor"
+    params:
+      max_chunk_size: 384
+      min_chunk_size: 100
+      strip_headers: true
+      min_output_length: 100
+
+  - name: "YuanEmbedderProcessor"
+    params:
+      model_path: "/home/wuteng/models/Yuan_embedding"
+
+  - name: "MilvusPersonalLoader"
+    params:
+      host: "47.98.227.81"
+      port: "8050"
+      collection: "knowledge_personal_test"
+      batch_size: 500
+      document_id_metadata_key: "document_id"
+      document_id_raw_key: "document_id"
+      default_type: "knowledge_personal_chunk"
